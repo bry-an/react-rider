@@ -15,6 +15,13 @@ class GoogleMap extends Component {
         )
     }
 
+    render() {
+        return (
+            <div id='googleMap'>
+            </div>
+        )
+    }
+
 }
 
 export default GoogleMap
