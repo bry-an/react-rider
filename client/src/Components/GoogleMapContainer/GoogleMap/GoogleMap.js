@@ -4,6 +4,10 @@ const google = window.google
 
 class GoogleMap extends Component {
 
+    componentDidMount() {
+        this.initMap
+    }
+
 
     initMap = ({ zoom, center }) => {
 
