@@ -25,6 +25,12 @@ export default class RouteEditor extends Component {
           />
         </form>
         <p>Editor tools</p>
+        <ul>
+          <li>tool</li>
+          <li>tool</li>
+          <li>tool</li>
+          <li>tool</li>
+        </ul>
 
 
       </div>

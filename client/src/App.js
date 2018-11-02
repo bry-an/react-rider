@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./App.sass";
 import "./assets/css/skeleton.css"
+import "./App.sass";
 import GoogleMapContainer from "./Components/GoogleMapContainer/GoogleMapContainer";
 import RouteEditor from "./Components/RouteEditor/RouteEditor";
 import WeatherPanel from "./Components/WeatherPanel/WeatherPanel";
