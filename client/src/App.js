@@ -1,12 +1,27 @@
-import React, { Component } from 'react';
-import './App.css';
-import GoogleMapContainer from './Components/GoogleMapContainer/GoogleMapContainer'
+import React, { Component } from "react";
+import "./App.sass";
+import "./assets/css/skeleton.css"
+import GoogleMapContainer from "./Components/GoogleMapContainer/GoogleMapContainer";
+import RouteEditor from "./Components/RouteEditor/RouteEditor";
+import WeatherPanel from "./Components/WeatherPanel/WeatherPanel";
 
 class App extends Component {
   render() {
     return (
-      <GoogleMapContainer />
-    )
+      <div className="container">
+        <div className="row">
+          <div className="two columns">
+            <RouteEditor />
+          </div>
+          <div className="eight columns">
+            <GoogleMapContainer />
+          </div>
+          <div className="two columns">
+            <WeatherPanel />
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
