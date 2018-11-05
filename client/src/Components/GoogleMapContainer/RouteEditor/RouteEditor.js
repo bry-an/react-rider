@@ -15,7 +15,7 @@ export default class RouteEditor extends Component {
   handleLocationInput = e => {
     e.preventDefault()
     console.log('location')
-    const location = autocomplete('location-entry')
+    const location = autoComplete('location-entry')
     console.log('location', location)
   }
 

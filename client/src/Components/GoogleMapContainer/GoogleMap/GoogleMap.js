@@ -8,6 +8,16 @@ class GoogleMap extends Component {
     this.initMap({ zoom: 12, center: { lat: 39.73, lng: -105 } });
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.center !== this.props.center) {
+      const options = {
+        zoom: 12,
+        center: nextProps.center
+      }
+      this.initMap(options)
+    }
+  }
+
   initMap = ({ zoom, center }) => {
 
     const map = new google.maps.Map(document.getElementById("googleMap"), {
