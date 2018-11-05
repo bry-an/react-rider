@@ -10,13 +10,13 @@ class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="two columns">
+          <div className="two columns route">
             <RouteEditor />
           </div>
-          <div className="eight columns">
+          <div className="eight columns map">
             <GoogleMapContainer />
           </div>
-          <div className="two columns">
+          <div className="two columns weather">
             <WeatherPanel />
           </div>
         </div>

@@ -11,8 +11,6 @@ export default class RouteEditor extends Component {
     autoComplete('location-entry')
   }
 
-
-
   render() {
     return (
       <div id='route-editor'>
