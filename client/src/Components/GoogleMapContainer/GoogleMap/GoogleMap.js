@@ -9,7 +9,6 @@ class GoogleMap extends Component {
   }
 
   initMap = ({ zoom, center }) => {
-    console.log("zoom", zoom);
 
     const map = new google.maps.Map(document.getElementById("googleMap"), {
       zoom,
