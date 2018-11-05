@@ -2,22 +2,18 @@ import React, { Component } from 'react'
 import autoComplete from '../../../utilities/autocomplete'
 import './RouteEditor.sass'
 import EditorTool from './EditorTool/EditorTool'
+import AutoComplete from '../AutoComplete'
 
 export default class RouteEditor extends Component {
   state = {
     locationEntry: ''
   }
 
+  mounted = false
   componentDidMount() {
-    autoComplete('location-entry')
+    this.mounted = true
   }
 
-  handleLocationInput = e => {
-    e.preventDefault()
-    console.log('location')
-    const location = autoComplete('location-entry')
-    console.log('location', location)
-  }
 
   getAutocomplete = () => {
     this.setState({
@@ -31,11 +27,13 @@ export default class RouteEditor extends Component {
       <div id='route-editor'>
         <form>
           <p>Enter your location</p>
+          {this.mounted && <AutoComplete
+            inputDiv='location-entry'
+            setMapCenter={this.props.setMapCenter} />}
           <input
             type='text'
             name='locationEntry'
             id='location-entry'
-            onSubmit={this.handleLocationInput}
           />
         </form>
         <p>Editor tools</p>

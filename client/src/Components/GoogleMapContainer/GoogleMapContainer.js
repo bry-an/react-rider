@@ -5,7 +5,7 @@ import WeatherPanel from './WeatherPanel/WeatherPanel'
 
 class GoogleMapContainer extends Component {
     state = {
-        mapCenter: {}
+        mapCenter: { lat: 39.73, lng: -105 }
     }
 
     setMapCenter = mapCenter => {
@@ -18,10 +18,10 @@ class GoogleMapContainer extends Component {
             <div className="container">
                 <div className="row">
                     <div className="two columns route">
-                        <RouteEditor />
+                        <RouteEditor setMapCenter={this.setMapCenter} />
                     </div>
                     <div className="eight columns map">
-                        <GoogleMap center={{ lat: 39.73, lng: -105 }} />
+                        <GoogleMap center={this.state.center} />
                     </div>
                     <div className="two columns weather">
                         <WeatherPanel />
